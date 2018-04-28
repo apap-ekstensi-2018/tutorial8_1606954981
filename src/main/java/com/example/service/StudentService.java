@@ -10,9 +10,9 @@ public interface StudentService
 
     List<StudentModel> selectAllStudents ();
 
-    boolean addStudent (StudentModel student);
+    void addStudent (StudentModel student);
 
-    boolean deleteStudent (String npm);
+    void deleteStudent (String npm);
     
-    boolean updateStudent (StudentModel student);
+    void updateStudent (StudentModel student);
 }

@@ -21,11 +21,6 @@ public class StudentController
     StudentService studentDAO;
 
 
-    @RequestMapping("/")
-    public String index ()
-    {
-        return "index";
-    }
 
 
     @RequestMapping("/student/add")

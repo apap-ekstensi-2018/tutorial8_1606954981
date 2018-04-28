@@ -35,31 +35,24 @@ public class StudentServiceDatabase implements StudentService
 
 
     @Override
-    public boolean addStudent (StudentModel student)
+    public void addStudent (StudentModel student)
     {
-        return studentMapper.addStudent(student);
+        studentMapper.addStudent (student);
     }
 
 
     @Override
-    public boolean deleteStudent (String npm)
+    public void deleteStudent (String npm)
     {
     	log.info ("student "+npm+" deleted");
-    	return studentMapper.deleteStudent(npm);
+    	studentMapper.deleteStudent(npm);
     }
 
 
 	@Override
-	public boolean updateStudent(StudentModel student) {
+	public void updateStudent(StudentModel student) {
 		log.info ("Student {} name update to", student.getNpm(),student.getName());
-		return studentMapper.updateStudent(student);
-	}
-	
-	
-	public StudentServiceDatabase() {}
-	
-	public StudentServiceDatabase(StudentMapper studentMapper) {
-		this.studentMapper = studentMapper;
+		studentMapper.updateStudent(student);
 	}
 	
 
